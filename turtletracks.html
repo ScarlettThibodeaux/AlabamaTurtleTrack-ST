@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endangered Turtles of Alabama - Conservation Presentation</title>
+    <!-- Changing to Gochi Hand font (casual, friendly, yet clear) -->
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+    
+    <style>
+        /* General Body and Font Styling */
+        body {
+            font-family: 'Gochi Hand', cursive, sans-serif; /* Updated Font to Gochi Hand */
+            background-color: #f0e9d6; /* Browner Light Cream/Tan base */
+            color: #382e2c; /* Deep Brown text for contrast */
+            margin: 0;
+            padding: 0;
+            line-height: 1.8; /* Increased line spacing for larger text */
+            font-size: 1.4em; /* Significantly Increased base font size */
+        }
+
+        h1, h2, h3 {
+            color: #1a5319; /* Dark Forest Green */
+            border-bottom: 2px solid #5a3c1c; /* Brown accent line */
+            padding-bottom: 5px;
+        }
+
+        /* Slide Container Styling */
+        .slide {
+            display: none; /* All slides hidden by default */
+            padding: 40px 20px;
+            min-height: 100vh;
+            background-color: #e0d7c3; /* Browner slide background */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+            max-width: 900px; /* Max width for desktop readability */
+            border-radius: 15px;
+        }
+
+        .slide:target, #slide-home {
+            display: block; /* Show slide when targeted or if it's the home slide */
+        }
+
+        /* Button Styling (Green and Brown Theme) */
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 8px 5px;
+            background-color: #4a804a; /* Medium Green Button (PRIMARY COLOR) */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 2px solid #5a3c1c; /* Brown border */
+            transition: background-color 0.3s, transform 0.1s;
+            cursor: pointer;
+            font-size: 1.3em; /* Increased button font size */
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: #3b663b; /* Darker Green on hover */
+            transform: translateY(-2px);
+        }
+
+        /* The .button-back class is kept for semantic meaning but inherits the same green colors for a uniform look. */
+        .button-back:hover {
+            background-color: #3b663b;
+        }
+
+        /* Content Styling */
+        .fact-box {
+            background-color: #fff;
+            padding: 15px;
+            border: 1px dashed #4a804a;
+            margin: 15px 0;
+            border-radius: 10px;
+            color: #382e2c; /* Ensure fact box text is brown */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #f0f0d8;
+            color: #382e2c; /* Ensure table text is brown */
+        }
+        th, td {
+            border: 1px solid #5a3c1c;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #4a804a;
+            color: white;
+            font-size: 1.3em; /* Increased table header font size */
+        }
+
+        .media-placeholder {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #d1c0a0; /* Light Brown/Tan for visual element */
+            border-radius: 10px;
+            border: 3px solid #1a5319;
+            font-weight: bold;
+            color: #382e2c; /* Ensure placeholder text is brown */
+        }
+    </style>
+</head>
+<body>
+
+<!-- HOME SLIDE -->
+<div id="slide-home" class="slide">
+    <h1>🚨 Alabama's Secret Guardians: Meet the Endangered Turtles! 🐢</h1>
+    <p>Did you know Alabama is a global hotspot for reptiles? Our rivers, coasts, and forests are home to ancient species fighting for survival. Explore the stories of five vulnerable shelled creatures—from the tiny Flattened Musk Turtle to the burrow-digging Gopher Tortoise—and discover how a single state holds the fate of these incredible animals.</p>
+    
+    <div class="fact-box" style="text-align: center; border: 3px solid #1a5319; background-color: #fcf8e3; margin-top: 30px;">
+        <h3 style="border-bottom: none; margin-top: 0; color: #1a5319;">Conservation Focus: Why They Matter</h3>
+        <p style="font-size: 1.1em; line-height: 1.5;">The Gopher Tortoise is a <b>Keystone Species</b>—its burrows save the lives of hundreds of other animals during fires. Protecting one turtle protects an entire ecosystem!</p>
+    </div>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="#slide-species" class="button">Alabama's Turtle Species</a>
+        <a href="#slide-compare" class="button">Turtle vs. Tortoise & Land vs. Sea</a>
+        <a href="#slide-tracks" class="button">Tracks & Terrain</a>
+        <a href="#slide-facts" class="button">Fun Facts & Conservation</a>
+    </div>
+</div>
+
+<!-- SLIDE 2: SPECIES INDEX -->
+<div id="slide-species" class="slide">
+    <h2>💚 Alabama's Most Vulnerable Species Index</h2>
+    <p>Dive deep into the habitat, threats, and conservation status of Alabama's most critical shelled reptiles:</p>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-around; margin-top: 30px;">
+        <!-- Removed inline styles to use the uniform green color -->
+        <a href="#slide-redbelly" class="button">Alabama Red-bellied Turtle (Endangered)</a>
+        <a href="#slide-flattenedmusk" class="button">Flattened Musk Turtle (Threatened)</a>
+        <a href="#slide-loggerhead" class="button">Loggerhead Sea Turtle (Threatened)</a>
+        <a href="#slide-kempsridley" class="button">Kemp's Ridley Sea Turtle (Endangered)</a>
+        <a href="#slide-gophertortoise" class="button">Gopher Tortoise (Land Tortoise)</a>
+    </div>
+    
+    <a href="#slide-home" class="button button-back">⬅ Home</a>
+    <a href="#slide-compare" class="button">General Topics (Comparison, Tracks, Facts)</a>
+</div>
+
+<!-- SLIDE 3: ALABAMA RED-BELLIED TURTLE -->
+<div id="slide-redbelly" class="slide">
+    <h2>⭐ Alabama Red-bellied Turtle </h2>
+    <h3><em>Pseudemys alabamensis</em></h3>
+    
+    <div class="media-placeholder">
+        
+        <img src="https://placehold.co/350x250/d1c0a0/382e2c?text=Alabama+Red-bellied+Turtle" alt="Photo of the Alabama Red-bellied Turtle, showing its large, arched shell and red plastron.">
+    </div>
+
+    <div class="fact-box">
+        <p>Status: <b>Endangered</b> (Federal & State)</p>
+        <p>Habitat: Mobile-Tensaw River Delta, primarily in fresh and brackish water with high aquatic vegetation. They rely heavily on <b>sandy river banks</b> for nesting.</p>
+        <p>Life Expectancy: Estimated over 30 years.</p>
+    </div>
+
+    <h3>Conservation Facts</h3>
+    <ul>
+        <li>State Reptile: This is Alabama's official <b>State Reptile</b>!</li>
+        <li>Primary Threat: <b>Road Mortality</b>. Females must cross busy roadways (like the Mobile Causeway) to reach nesting sites, leading to high adult fatality rates.</li>
+        <li>Nesting Sites: Destruction and degradation of the sandy nesting habitats are critical issues.</li>
+    </ul>
+    
+    <a href="#slide-species" class="button button-back">⬅ Species Index</a>
+    <a href="#slide-flattenedmusk" class="button">Next Turtle</a>
+</div>
+
+<!-- SLIDE 4: FLATTENED MUSK TURTLE -->
+<div id="slide-flattenedmusk" class="slide">
+    <h2>🌊 Flattened Musk Turtle </h2>
+    <h3><em>Sternotherus depressus</em></h3>
+
+    <div class="media-placeholder">
+        
+        <img src="https://placehold.co/350x250/d1c0a0/382e2c?text=Flattened+Musk+Turtle" alt="Photo of the Flattened Musk Turtle, showcasing its distinctively flat, dark shell.">
+    </div>
+
+    <div class="fact-box">
+        <p>Status: <b>Threatened</b> (Federal)</p>
+        <p>Habitat: Endemic (only found) in the upper Black Warrior River drainage system. Prefers <b>clear, fast-flowing streams</b> with abundant underwater rock crevices.</p>
+        <p>Life Expectancy: 20 to 40 years.</p>
+    </div>
+
+    <h3>Conservation Facts</h3>
+    <ul>
+        <li>Unique Adaptation: Its namesake "flattened" shell is an evolutionary trait that allows it to easily hide in the narrow spaces between submerged boulders.</li>
+        <li>Primary Threat: <b>Water Quality & Siltation</b>. This turtle relies heavily on aquatic snails for food. Pollution and runoff destroy both the habitat and their food source.</li>
+        <li>Size: This is one of America's <b>smallest turtles</b>, rarely exceeding 4.3 inches in shell length.</li>
+    </ul>
+
+    <a href="#slide-species" class="button button-back">⬅ Species Index</a>
+    <a href="#slide-loggerhead" class="button">Next Turtle</a>
+</div>
+
+<!-- SLIDE 5: LOGGERHEAD SEA TURTLE -->
+<div id="slide-loggerhead" class="slide">
+    <h2>🏖️ Loggerhead Sea Turtle</h2>
+    <h3><em>Caretta caretta</em></h3>
+
+    <div class="media-placeholder">
+        
+        <img src="https://placehold.co/350x250/d1c0a0/382e2c?text=Loggerhead+Sea+Turtle" alt="Photo of a large Loggerhead sea turtle swimming.">
+    </div>
+
+    <div class="fact-box">
+        <p>Status: <b>Threatened</b> (Northwest Atlantic DPS)</p>
+        <p>Habitat: Warm, temperate and tropical oceans. Females nest on the sandy beaches of Coastal Alabama.</p>
+        <p>Life Expectancy: 50 to 70+ years.</p>
+    </div>
+
+    <h3>Conservation Facts</h3>
+    <ul>
+        <li>Massive Jaw: Named for its massive head and jaw muscles used to crush the shells of prey like clams and crabs.</li>
+        <li>Primary Threat: <b>Bycatch</b> (getting accidentally caught in fishing gear) and light pollution on nesting beaches that disorients hatchlings.</li>
+        <li>Unique Tracks: Leaves an <b>alternating, asymmetrical track</b> pattern in the sand when nesting.</li>
+    </ul>
+
+    <a href="#slide-species" class="button button-back">⬅ Species Index</a>
+    <a href="#slide-kempsridley" class="button">Next Turtle</a>
+</div>
+
+<!-- SLIDE 6: KEMP'S RIDLEY SEA TURTLE -->
+<div id="slide-kempsridley" class="slide">
+    <h2>🌊 Kemp's Ridley Sea Turtle</h2>
+    <h3><em>Lepidochelys kempii</em></h3>
+
+    <div class="media-placeholder">
+        
+        <img src="https://placehold.co/350x250/d1c0a0/382e2c?text=Kemps+Ridley+Sea+Turtle" alt="Photo of a small, dark Kemp's Ridley sea turtle.">
+    </div>
+
+    <div class="fact-box">
+        <p>Status: <b>Endangered</b> (Federal)</p>
+        <p>Habitat: Primarily the Gulf of Mexico. They are sometimes found in Alabama's coastal waters, though nesting rarely occurs here.</p>
+        <p>Size: <b>Smallest marine turtle</b> in the world, averaging only 2 feet long.</p>
+    </div>
+
+    <h3>Conservation Facts</h3>
+    <ul>
+        <li>Arribadas: This species is famous for synchronized <b>mass nesting events</b> called *arribadas* (Spanish for "arrival").</li>
+        <li>Vulnerability: Due to their dependence on the Gulf of Mexico, they are highly vulnerable to oil spills and habitat degradation in the region.</li>
+        <li>Conservation: Use of <b>Turtle Excluder Devices (TEDs)</b> in shrimping nets is critical for reducing accidental drowning.</li>
+    </ul>
+
+    <a href="#slide-species" class="button button-back">⬅ Species Index</a>
+    <a href="#slide-gophertortoise" class="button">Next Tortoise</a>
+</div>
+
+<!-- SLIDE 7: GOPHER TORTOISE -->
+<div id="slide-gophertortoise" class="slide">
+    <h2>🏜️ Gopher Tortoise (Land Dweller)</h2>
+    <h3><em>Gopherus polyphemus</em></h3>
+
+    <div class="media-placeholder">
+        
+        <img src="https://placehold.co/350x250/d1c0a0/382e2c?text=Gopher+Tortoise" alt="Photo of a Gopher Tortoise walking on sand with stumpy legs.">
+    </div>
+
+    <div class="fact-box">
+        <p>Status: <b>Threatened</b> (in the Western portion of its range, including Alabama)</p>
+        <p>Habitat: Sandy, well-drained upland habitats, particularly longleaf pine forests in southern Alabama (a terrestrial terrain).</p>
+        <p><b>Keystone Species</b>: Their extensive burrows provide essential shelter for over 350 other species from predators and fire.</p>
+    </div>
+
+    <h3>Turtle vs. Tortoise Fact</h3>
+    <ul>
+        <li>Body Type: Unlike the aquatic turtles, the Gopher Tortoise has <b>stumpy, club-like legs</b> and a highly domed shell, perfectly adapted for digging deep burrows.</li>
+        <li>Burrow Depth: A single Gopher Tortoise burrow can be up to 48 feet long and 10 feet deep!</li>
+        <li>Biggest Threat: <b>Habitat loss</b> and fragmentation due to human development and agriculture.</li>
+    </ul>
+
+    <a href="#slide-species" class="button button-back">⬅ Species Index</a>
+    <a href="#slide-compare" class="button">See Comparison Slide</a>
+</div>
+
+<!-- SLIDE 8: COMPARISON -->
+<div id="slide-compare" class="slide">
+    <h2>🌳 Turtle vs. Tortoise & Land vs. Sea 🌊</h2>
+    <p>Not all shelled reptiles are the same! Their body shape is perfectly adapted to their environment.</p>
+
+    <h3>Turtle vs. Tortoise (General)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>TURTLE (Aquatic/Semi-aquatic)</th>
+                <th>TORTOISE (<b>Terrestrial</b>, e.g., Gopher Tortoise)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Limbs</td>
+                <td>Webbed feet or flippers for swimming.</td>
+                <td><b>Stumpy, club-like legs</b> for walking and heavy burrowing.</td>
+            </tr>
+            <tr>
+                <td>Shell</td>
+                <td>Flatter, lighter, streamlined.</td>
+                <td><b>Highly domed, heavy, protective.</b></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Freshwater Turtle vs. Sea Turtle</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>FRESHWATER TURTLE (e.g., Red-bellied)</th>
+                <th>SEA TURTLE (e.g., Loggerhead)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Land Use</td>
+                <td>Comes on land to nest, bask, and sometimes travel.</td>
+                <td>Females only come ashore to nest; otherwise <b>fully marine</b>.</td>
+            </tr>
+            <tr>
+                <td>Diet</td>
+                <td>Omnivorous or Herbivorous (aquatic plants).</td>
+                <td><b>Carnivorous</b> (crabs, jellyfish, mollusks).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="#slide-home" class="button button-back">⬅ Home</a>
+    <a href="#slide-tracks" class="button">Next: Tracks & Terrain</a>
+</div>
+
+<!-- SLIDE 9: TRACKS & TERRAIN -->
+<div id="slide-tracks" class="slide">
+    <h2>👣 Tracks & Terrain</h2>
+    <p>Every reptile leaves a unique track. Look closely at the prints and trails left in the sand or mud to identify the species.</p>
+
+    <!-- Container for a flexible layout of the 5 tracks -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px;">
+        
+        <!-- 1. Kemp's Ridley Sea Turtle Track -->
+        <div style="width: 45%; min-width: 300px; text-align: center;">
+            <h3>Kemp's Ridley Sea Turtle</h3>
+            <div class="media-placeholder">
+                <img src="https://placehold.co/300x120/d1c0a0/382e2c?text=Small+Asymmetrical+Sea+Turtle+Track" alt="Diagram of a Kemp's Ridley sea turtle track.">
+            </div>
+        </div>
+
+        <!-- 2. Loggerhead Sea Turtle Track -->
+        <div style="width: 45%; min-width: 300px; text-align: center;">
+            <h3>Loggerhead Sea Turtle</h3>
+            <div class="media-placeholder">
+                <img src="https://placehold.co/300x120/d1c0a0/382e2c?text=Large+Asymmetrical+Sea+Turtle+Track" alt="Diagram of a Loggerhead sea turtle track.">
+            </div>
+        </div>
+        
+        <!-- 3. Alabama Red-bellied Turtle Track -->
+        <div style="width: 45%; min-width: 300px; text-align: center;">
+            <h3>Alabama Red-bellied Turtle</h3>
+            <div class="media-placeholder">
+                <img src="https://placehold.co/300x120/d1c0a0/382e2c?text=Freshwater+Turtle+Claw+Prints+%2B+Drag" alt="Diagram of a freshwater turtle track showing claw prints and a plastron drag mark.">
+            </div>
+        </div>
+
+        <!-- 4. Flattened Musk Turtle Track -->
+        <div style="width: 45%; min-width: 300px; text-align: center;">
+            <h3>Flattened Musk Turtle</h3>
+            <div class="media-placeholder">
+                <img src="https://placehold.co/300x120/d1c0a0/382e2c?text=Small+Aquatic+Turtle+Print" alt="Diagram of a small aquatic turtle's tracks.">
+            </div>
+        </div>
+        
+        <!-- 5. Gopher Tortoise Track -->
+        <div style="width: 45%; min-width: 300px; text-align: center;">
+            <h3>Gopher Tortoise</h3>
+            <div class="media-placeholder">
+                <img src="https://placehold.co/300x120/d1c0a0/382e2c?text=Heavy+Stumpy+Foot+Prints+(No+Drag)" alt="Diagram of a Gopher Tortoise's heavy, stumpy foot tracks.">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Centered navigation buttons at the bottom of Slide 9 -->
+    <div style="text-align: center; margin-top: 30px;">
+        <a href="#slide-home" class="button button-back">⬅ Home</a>
+        <a href="#slide-facts" class="button">Next: Fun Facts & Conservation</a>
+    </div>
+</div>
+
+<!-- SLIDE 10: FUN FACTS & CONSERVATION -->
+<div id="slide-facts" class="slide">
+    <h2>💡 Fun Facts & Conservation</h2>
+
+    <h3>🔬 Cool Science & Fun Facts</h3>
+    <ul>
+        <li>Flattened for Survival: The Flattened Musk Turtle has an exceptionally flat shell—an adaptation allowing it to hide in the narrow crevices of <b>rocky streambeds</b>.</li>
+        <li>Temperature Control: The sex of sea turtle hatchlings is determined by nest temperature (<b>TSD</b>). Warmer sand produces females; cooler sand produces males.</li>
+        <li>State Pride: The Alabama Red-bellied Turtle is Alabama's official <b>State Reptile</b>.</li>
+        <li>Shell Texture: Unlike the hard shells of many turtles, the Kemp's Ridley Sea Turtle has a smooth, almost waxy carapace.</li>
+    </ul>
+
+    <h3>🛠️ Conservation: How YOU Can Help</h3>
+    <div class="fact-box">
+        <h4>1. <b>Reduce Road Mortality</b> (Freshwater Turtles)</h4>
+        <p>Females of the Red-bellied Turtle are often killed crossing roads to nest. Conservation Action: Barriers and tunnels are sometimes used to guide them safely.</p>
+    </div>
+    <div class="fact-box">
+        <h4>2. <b>Protect Water Quality</b> (Flattened Musk Turtle)</h4>
+        <p>Silt and pollution from runoff destroy the habitat and food source (snails). Conservation Action: Support local watershed protection efforts and erosion control.</p>
+    </div>
+    <div class="fact-box">
+        <h4>3. <b>Keep Beaches Dark</b> (Sea Turtles)</h4>
+        <p>Artificial lighting disorients nesting females and hatchlings. Conservation Action: Use turtle-friendly (red or amber) lighting and turn off all lights visible from the beach during nesting season.</p>
+    </div>
+
+    <h3>▶️ See a Loggerhead Hatching!</h3>
+    <p>Witness a "boil" of sea turtle hatchlings emerging on a Gulf Shores beach:</p>
+    <a href="https://www.youtube.com/watch?v=R14FREY_FYA" target="_blank" class="button">Watch Sea Turtle Hatching Video</a>
+    
+    <a href="#slide-home" class="button button-back">⬅ Home</a>
+</div>
+
+</body>
+</html>
