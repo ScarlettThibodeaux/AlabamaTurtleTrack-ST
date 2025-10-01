@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Endangered Turtles of Alabama - Conservation Presentation</title>
-    <!-- Changing to Gochi Hand font (casual, friendly, yet clear) -->
     <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
     
     <style>
@@ -104,12 +103,29 @@
             border: 3px solid #1a5319;
             font-weight: bold;
             color: #382e2c; /* Ensure placeholder text is brown */
+            /* Add a defined height for consistency when no image is present */
+            height: 400px; /* Set a consistent height for the frame */
+            display: flex; /* Enable flexbox for centering image vertically/horizontally */
+            align-items: center; /* Center image vertically */
+            justify-content: center; /* Center image horizontally */
+            overflow: hidden; /* Hide anything that might spill outside the frame */
         }
+
+        /* 🖼️ IMAGE FIT SOLUTION 🖼️ */
+        .media-placeholder img {
+            max-width: 100%; /* Image will not exceed the width of its container */
+            max-height: 100%; /* Image will not exceed the height of its container (400px) */
+            height: auto; /* Maintain aspect ratio */
+            width: auto; /* Maintain aspect ratio */
+            object-fit: contain; /* Scales the image to fit without cropping, preserving aspect ratio */
+            border-radius: 8px; /* Slight border radius for a smoother look on the images */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        /* 🖼️ END IMAGE FIT SOLUTION 🖼️ */
     </style>
 </head>
 <body>
 
-<!-- HOME SLIDE -->
 <div id="slide-home" class="slide">
     <h1>🚨 Alabama's Secret Guardians: Meet the Endangered Turtles! 🐢</h1>
     <p>Did you know Alabama is a global hotspot for reptiles? Our rivers, coasts, and forests are home to ancient species fighting for survival. Explore the stories of five vulnerable shelled creatures—from the tiny Flattened Musk Turtle to the burrow-digging Gopher Tortoise—and discover how a single state holds the fate of these incredible animals.</p>
@@ -127,13 +143,13 @@
     </div>
 </div>
 
-<!-- SLIDE 2: SPECIES INDEX -->
+---
+
 <div id="slide-species" class="slide">
     <h2>💚 Alabama's Most Vulnerable Species Index</h2>
     <p>Dive deep into the habitat, threats, and conservation status of Alabama's most critical shelled reptiles:</p>
 
     <div style="display: flex; flex-wrap: wrap; justify-content: space-around; margin-top: 30px;">
-        <!-- Removed inline styles to use the uniform green color -->
         <a href="#slide-redbelly" class="button">Alabama Red-bellied Turtle (Endangered)</a>
         <a href="#slide-flattenedmusk" class="button">Flattened Musk Turtle (Threatened)</a>
         <a href="#slide-loggerhead" class="button">Loggerhead Sea Turtle (Threatened)</a>
@@ -145,7 +161,8 @@
     <a href="#slide-compare" class="button">General Topics (Comparison, Tracks, Facts)</a>
 </div>
 
-<!-- SLIDE 3: ALABAMA RED-BELLIED TURTLE -->
+---
+
 <div id="slide-redbelly" class="slide">
     <h2>⭐ Alabama Red-bellied Turtle </h2>
     <h3><em>Pseudemys alabamensis</em></h3>
@@ -172,7 +189,8 @@
     <a href="#slide-flattenedmusk" class="button">Next Turtle</a>
 </div>
 
-<!-- SLIDE 4: FLATTENED MUSK TURTLE -->
+---
+
 <div id="slide-flattenedmusk" class="slide">
     <h2>🌊 Flattened Musk Turtle </h2>
     <h3><em>Sternotherus depressus</em></h3>
@@ -199,7 +217,8 @@
     <a href="#slide-loggerhead" class="button">Next Turtle</a>
 </div>
 
-<!-- SLIDE 5: LOGGERHEAD SEA TURTLE -->
+---
+
 <div id="slide-loggerhead" class="slide">
     <h2>🏖️ Loggerhead Sea Turtle</h2>
     <h3><em>Caretta caretta</em></h3>
@@ -226,7 +245,8 @@
     <a href="#slide-kempsridley" class="button">Next Turtle</a>
 </div>
 
-<!-- SLIDE 6: KEMP'S RIDLEY SEA TURTLE -->
+---
+
 <div id="slide-kempsridley" class="slide">
     <h2>🌊 Kemp's Ridley Sea Turtle</h2>
     <h3><em>Lepidochelys kempii</em></h3>
@@ -253,7 +273,8 @@
     <a href="#slide-gophertortoise" class="button">Next Tortoise</a>
 </div>
 
-<!-- SLIDE 7: GOPHER TORTOISE -->
+---
+
 <div id="slide-gophertortoise" class="slide">
     <h2>🏜️ Gopher Tortoise (Land Dweller)</h2>
     <h3><em>Gopherus polyphemus</em></h3>
@@ -280,7 +301,8 @@
     <a href="#slide-compare" class="button">See Comparison Slide</a>
 </div>
 
-<!-- SLIDE 8: COMPARISON -->
+---
+
 <div id="slide-compare" class="slide">
     <h2>🌳 Turtle vs. Tortoise & Land vs. Sea 🌊</h2>
     <p>Not all shelled reptiles are the same! Their body shape is perfectly adapted to their environment.</p>
@@ -335,15 +357,14 @@
     <a href="#slide-tracks" class="button">Next: Tracks & Terrain</a>
 </div>
 
-<!-- SLIDE 9: TRACKS & TERRAIN -->
+---
+
 <div id="slide-tracks" class="slide">
     <h2>👣 Tracks & Terrain</h2>
     <p>Every reptile leaves a unique track. Look closely at the prints and trails left in the sand or mud to identify the species.</p>
 
-    <!-- Container for a flexible layout of the 5 tracks -->
     <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px;">
         
-        <!-- 1. Kemp's Ridley Sea Turtle Track -->
         <div style="width: 45%; min-width: 300px; text-align: center;">
             <h3>Kemp's Ridley Sea Turtle</h3>
             <div class="media-placeholder">
@@ -351,15 +372,13 @@
             </div>
         </div>
 
-        <!-- 2. Loggerhead Sea Turtle Track -->
         <div style="width: 45%; min-width: 300px; text-align: center;">
             <h3>Loggerhead Sea Turtle</h3>
             <div class="media-placeholder">
-                <img src=https://www.conservationtales.com/uploads/3/7/4/5/37455725/published/loggerhead-track-4.jpg?1524947393"" alt="Diagram of a Loggerhead sea turtle track.">
+                <img src="https://tpwd.texas.gov/huntwild/wild/wildlife_diversity/nongame/turtles/images/loggerhead_track_a.jpg" alt="Diagram of a Loggerhead sea turtle track.">
             </div>
         </div>
         
-        <!-- 3. Alabama Red-bellied Turtle Track -->
         <div style="width: 45%; min-width: 300px; text-align: center;">
             <h3>Alabama Red-bellied Turtle</h3>
             <div class="media-placeholder">
@@ -367,7 +386,6 @@
             </div>
         </div>
 
-        <!-- 4. Flattened Musk Turtle Track -->
         <div style="width: 45%; min-width: 300px; text-align: center;">
             <h3>Flattened Musk Turtle</h3>
             <div class="media-placeholder">
@@ -375,7 +393,6 @@
             </div>
         </div>
         
-        <!-- 5. Gopher Tortoise Track -->
         <div style="width: 45%; min-width: 300px; text-align: center;">
             <h3>Gopher Tortoise</h3>
             <div class="media-placeholder">
@@ -385,14 +402,14 @@
 
     </div>
 
-    <!-- Centered navigation buttons at the bottom of Slide 9 -->
     <div style="text-align: center; margin-top: 30px;">
         <a href="#slide-home" class="button button-back">⬅ Home</a>
         <a href="#slide-facts" class="button">Next: Fun Facts & Conservation</a>
     </div>
 </div>
 
-<!-- SLIDE 10: FUN FACTS & CONSERVATION -->
+---
+
 <div id="slide-facts" class="slide">
     <h2>💡 Fun Facts & Conservation</h2>
 
